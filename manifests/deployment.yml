@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: alftioksappdevadv 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: alftioksappdevadv
+  template:
+    metadata:
+      labels:
+        app: alftioksappdevadv 
+    spec:
+      containers:
+        - name: alftioksappdevadv 
+          image: acrlab22.azurecr.io/alftioksappdevadv
+          ports:
+          - containerPort: 80
